@@ -155,6 +155,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return url;
   }
 
+  // Helper: Get Google Drive video thumbnail URL from a Drive link
+  function getGoogleDriveThumbnail(url) {
+    if (!url) return '';
+    const driveRegExp = /\/file\/d\/([a-zA-Z0-9_-]+)/;
+    const match = url.match(driveRegExp);
+    if (match && match[1]) {
+      return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1280`;
+    }
+    return '';
+  }
+
   // 4. Render Member Profile Details
   const container = document.getElementById('member-detail-container');
   if (container) {
@@ -195,10 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioGrid.innerHTML = ''; // Clear loading
 
     member.portfolio.forEach(item => {
+      const thumbnail = getGoogleDriveThumbnail(item.videoUrl) || member.image;
       const cardHtml = `
         <div class="portfolio-card clickable-video-card" data-video-url="${item.videoUrl}" data-video-title="${item.title}">
           <div class="video-thumbnail-container">
-            <img src="${member.image}" alt="${item.title}" class="portfolio-thumbnail">
+            <img src="${thumbnail}" alt="${item.title}" class="portfolio-thumbnail" onerror="this.src='${member.image}'">
             <div class="play-overlay">
               <div class="play-button-pulsing">
                 <i class="fa-solid fa-play"></i>
