@@ -317,6 +317,7 @@ header.scrolled .logo img {
   text-decoration: none;
   transition: var(--transition-smooth);
   display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-btn-secondary:hover {
@@ -1319,6 +1320,15 @@ footer {
   }
   .hero-content p {
     font-size: 15px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .hero-buttons a {
+    width: 100%;
+    max-width: 300px;
   }
   .visual-sphere {
     width: 220px;
