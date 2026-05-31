@@ -156,26 +156,41 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     don3: {
-      name: "Don3",
-      title: "VFX & Post-Production Lead",
-      bio: "Don3 is the wizard behind the scenes, bringing imagination to life through stunning visual effects, meticulous editing, and cinematic color grading. Possessing expert control over high-end editing tools, he treats every frame like a canvas. His ability to synchronize sound, color, and motion ensures that all commercials have that polished, Hollywood-grade premium feel before delivery.",
-      skills: ["Color Grading", "DaVinci Resolve", "VFX Compositing", "3D Rendering & Animation", "Sound Design & Mix", "Adobe After Effects"],
+      name: "Midhun Venu",
+      title: "Video Editor",
+      bio: "Midhun Venu is a highly skilled video editor at DUONE. Known for his creative cuts, rhythmic editing, and advanced post-production techniques, he specializes in delivering fast-paced and visually engaging content. From commercial campaigns to dynamic podcast visuals, his editing ensures that every project captures attention instantly and holds it until the very end.",
+      skills: ["Video Editing", "Creative Cuts", "Pacing & Rhythm", "Post-Production", "Color Correction", "Visual Storytelling"],
       image: "assets/don3.png",
       portfolio: [
         {
-          title: "Marvel Studios' VFX Breakdown - Studio Reel",
-          category: "Visual Effects",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Dhathri Shampoo",
+          category: "Commercial Video",
+          videoUrl: "https://drive.google.com/file/d/1slX4AnSwFtwRj1vi1-D1PtQOZgBoWsN6/view?usp=drive_link"
         },
         {
-          title: "Beats by Dre - Color Grading & Sound Design Showcase",
-          category: "Sound & Motion",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Find My Hostel 3",
+          category: "Ad Film",
+          videoUrl: "https://drive.google.com/file/d/1PMhzBHZE-tJU9lzTh5Wap74yQfRt3fKT/view?usp=drive_link"
         },
         {
-          title: "Audi - Cinematic Car Commercial VFX Walkthrough",
-          category: "Automotive Film",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Find My Hostel",
+          category: "Ad Film",
+          videoUrl: "https://drive.google.com/file/d/1S6b3YoCnnBUwPkfuvPOFr1PJJDUnC4-z/view?usp=drive_link"
+        },
+        {
+          title: "Dhathri Theme",
+          category: "Brand Film",
+          videoUrl: "https://drive.google.com/file/d/1QJ2zrF_7sb20KotAgLsCxkWmNCDUMqP-/view?usp=drive_link"
+        },
+        {
+          title: "Ledger X",
+          category: "Promotional Video",
+          videoUrl: "https://drive.google.com/file/d/1_L6819_R4IIKXUnUtx2F_2NvSdhhydML/view?usp=drive_link"
+        },
+        {
+          title: "Ledger X 2",
+          category: "Promotional Video",
+          videoUrl: "https://drive.google.com/file/d/1QPJEqQJp3FM4lHiWcJhS2j4Vhz1wKiYA/view?usp=drive_link"
         }
       ]
     }
