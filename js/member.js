@@ -165,17 +165,41 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioGrid.innerHTML = ''; // Clear loading
 
     member.portfolio.forEach(item => {
-      const embedUrl = getGoogleDriveEmbedUrl(item.videoUrl);
+      const url = item.videoUrl;
+      let playerHtml = '';
+      
+      // Check if it's a direct video link (ends with .mp4, is hosted on raw github, or is a github release asset)
+      const isDirectVideo = url.toLowerCase().endsWith('.mp4') || 
+                            url.includes('raw.githubusercontent.com') || 
+                            url.includes('/releases/download/');
+      
+      if (isDirectVideo) {
+        playerHtml = `
+          <video 
+            controls 
+            playsinline 
+            preload="metadata"
+            poster="${member.image}">
+            <source src="${url}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+      } else {
+        const embedUrl = getGoogleDriveEmbedUrl(url);
+        playerHtml = `
+          <iframe 
+            src="${embedUrl}" 
+            title="${item.title}" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+          </iframe>
+        `;
+      }
       
       const cardHtml = `
         <div class="portfolio-card">
           <div class="video-player-container">
-            <iframe 
-              src="${embedUrl}" 
-              title="${item.title}" 
-              allow="autoplay; encrypted-media" 
-              allowfullscreen>
-            </iframe>
+            ${playerHtml}
           </div>
           <div class="portfolio-card-info">
             <div class="portfolio-card-category">${item.category}</div>
