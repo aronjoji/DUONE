@@ -1283,13 +1283,18 @@ footer {
     padding-bottom: 56.25%;
   }
   .lightbox-close {
-    top: 15px;
-    right: 20px;
-    font-size: 36px;
+    top: 12px;
+    right: 16px;
+    font-size: 32px;
+    color: #fff;
   }
   .lightbox-content {
-    width: 95%;
-    border-radius: 8px;
+    width: 100%;
+    height: 75vh;
+    max-width: none;
+    aspect-ratio: auto;
+    border-radius: 0;
+    border: none;
   }
 }
 
