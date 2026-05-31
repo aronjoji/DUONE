@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle logic for header (needed on member page too)
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  
+
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('active');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image: "assets/don1.png",
       portfolio: [
         {
-          title: "New Project",
+          title: "Dhathri - Jayaraj",
           category: "Creative Direction",
           videoUrl: "https://drive.google.com/file/d/1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA/view?usp=sharing"
         },
@@ -218,20 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Helper: Extract Google Drive File ID and return Embed/Preview URL
   function getGoogleDriveEmbedUrl(url) {
     if (!url) return '';
-    
+
     // If it's already a preview URL, return it
     if (url.includes('/preview')) {
       return url;
     }
-    
+
     // Regular expression to match the Google Drive file ID
     const driveRegExp = /\/file\/d\/([a-zA-Z0-9_-]+)/;
     const match = url.match(driveRegExp);
-    
+
     if (match && match[1]) {
       return `https://drive.google.com/file/d/${match[1]}/preview`;
     }
-    
+
     return url;
   }
 
@@ -313,20 +313,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('video-lightbox');
     const lightboxClose = document.getElementById('lightbox-close');
     const lightboxContent = document.querySelector('.lightbox-content');
-    
+
     if (lightbox && lightboxClose && lightboxContent) {
       portfolioGrid.addEventListener('click', (e) => {
         const card = e.target.closest('.clickable-video-card');
         if (!card) return;
-        
+
         const videoUrl = card.getAttribute('data-video-url');
         const videoTitle = card.getAttribute('data-video-title');
         if (!videoUrl) return;
-        
-        const isDirectVideo = videoUrl.toLowerCase().endsWith('.mp4') || 
-                              videoUrl.includes('raw.githubusercontent.com') || 
-                              videoUrl.includes('/releases/download/');
-        
+
+        const isDirectVideo = videoUrl.toLowerCase().endsWith('.mp4') ||
+          videoUrl.includes('raw.githubusercontent.com') ||
+          videoUrl.includes('/releases/download/');
+
         let playerHtml = '';
         if (isDirectVideo) {
           playerHtml = `
@@ -350,30 +350,30 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           `;
         }
-        
+
         // Inject player code
         lightboxContent.innerHTML = playerHtml;
-        
+
         // Show lightbox
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       });
-      
+
       const closeLightbox = () => {
         lightbox.classList.remove('active');
         lightboxContent.innerHTML = ''; // Stops audio/video instantly
         document.body.style.overflow = ''; // Restore scroll
       };
-      
+
       lightboxClose.addEventListener('click', closeLightbox);
-      
+
       // Close on clicking backdrop
       lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
           closeLightbox();
         }
       });
-      
+
       // Close on ESC
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
