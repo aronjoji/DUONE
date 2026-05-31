@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // 5. Render Member Portfolio Videos
+  // 5. Render Member Portfolio Videos (Using Thumbnail + Lightbox Model)
   const portfolioGrid = document.getElementById('portfolio-grid');
   const portfolioSection = document.getElementById('portfolio-section');
   const portfolioTitle = document.getElementById('portfolio-title');
@@ -165,41 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioGrid.innerHTML = ''; // Clear loading
 
     member.portfolio.forEach(item => {
-      const url = item.videoUrl;
-      let playerHtml = '';
-      
-      // Check if it's a direct video link (ends with .mp4, is hosted on raw github, or is a github release asset)
-      const isDirectVideo = url.toLowerCase().endsWith('.mp4') || 
-                            url.includes('raw.githubusercontent.com') || 
-                            url.includes('/releases/download/');
-      
-      if (isDirectVideo) {
-        playerHtml = `
-          <video 
-            controls 
-            playsinline 
-            preload="metadata"
-            poster="${member.image}">
-            <source src="${url}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        `;
-      } else {
-        const embedUrl = getGoogleDriveEmbedUrl(url);
-        playerHtml = `
-          <iframe 
-            src="${embedUrl}" 
-            title="${item.title}" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-          </iframe>
-        `;
-      }
-      
       const cardHtml = `
-        <div class="portfolio-card">
-          <div class="video-player-container">
-            ${playerHtml}
+        <div class="portfolio-card clickable-video-card" data-video-url="${item.videoUrl}" data-video-title="${item.title}">
+          <div class="video-thumbnail-container">
+            <img src="${member.image}" alt="${item.title}" class="portfolio-thumbnail">
+            <div class="play-overlay">
+              <div class="play-button-pulsing">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
           </div>
           <div class="portfolio-card-info">
             <div class="portfolio-card-category">${item.category}</div>
@@ -212,5 +186,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Make section visible
     portfolioSection.style.display = 'block';
+
+    // 6. Lightbox Event Handlers
+    const lightbox = document.getElementById('video-lightbox');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    
+    if (lightbox && lightboxClose && lightboxContent) {
+      portfolioGrid.addEventListener('click', (e) => {
+        const card = e.target.closest('.clickable-video-card');
+        if (!card) return;
+        
+        const videoUrl = card.getAttribute('data-video-url');
+        const videoTitle = card.getAttribute('data-video-title');
+        if (!videoUrl) return;
+        
+        const isDirectVideo = videoUrl.toLowerCase().endsWith('.mp4') || 
+                              videoUrl.includes('raw.githubusercontent.com') || 
+                              videoUrl.includes('/releases/download/');
+        
+        let playerHtml = '';
+        if (isDirectVideo) {
+          playerHtml = `
+            <div class="lightbox-video-wrapper">
+              <video controls autoplay playsinline style="width: 100%; height: 100%; object-fit: contain;">
+                <source src="${videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          `;
+        } else {
+          const embedUrl = getGoogleDriveEmbedUrl(videoUrl);
+          playerHtml = `
+            <div class="lightbox-video-wrapper">
+              <iframe 
+                src="${embedUrl}" 
+                title="${videoTitle || 'Portfolio Work'}" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          `;
+        }
+        
+        // Inject player code
+        lightboxContent.innerHTML = playerHtml;
+        
+        // Show lightbox
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Lock background scrolling
+      });
+      
+      const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        lightboxContent.innerHTML = ''; // Stops audio/video instantly
+        document.body.style.overflow = ''; // Restore scroll
+      };
+      
+      lightboxClose.addEventListener('click', closeLightbox);
+      
+      // Close on clicking backdrop
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      
+      // Close on ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+    }
   }
 });
