@@ -1136,6 +1136,11 @@ footer {
   .team-grid {
     grid-template-columns: 1fr;
   }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1145,7 +1150,7 @@ footer {
     text-align: center;
   }
   .video-player-container {
-    padding-bottom: 70%; /* Taller on mobile to avoid Drive UI elements blocking controls */
+    padding-bottom: 56.25%; /* Revert to standard 16:9 on mobile since the full-width card provides ample space */
   }
 }
 
