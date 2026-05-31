@@ -72,26 +72,71 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     don2: {
-      name: "Don2",
-      title: "Lead Brand Strategist",
-      bio: "Don2 is a master of psychology and market dynamics. He bridges the gap between creative visual work and business metrics. With a background in consumer behavior and brand positioning, he designs target-oriented strategies that ensure DUONE's ad campaigns reach the exact audience they need to convert. From high-level launch positioning to copywriting hooks, Don2 makes sure every creative element is built on solid data.",
-      skills: ["Brand Positioning", "Market Analytics", "Target Audience Profiling", "Conversion Copywriting", "SEO & Digital Strategy", "ROI Optimization"],
+      name: "Don Xavier",
+      title: "Video Editor",
+      bio: "Don Xavier is the master video editor at DUONE, turning raw footage into polished, high-impact visual stories. With an exceptional eye for pacing, transitions, and color grading, he brings every project to life with cinematic precision. His editing expertise spans commercial ads, brand films, and promotional content, ensuring every frame delivers maximum impact.",
+      skills: ["Video Editing", "Color Grading", "Motion Graphics", "Sound Design", "Post-Production", "Visual Effects"],
       image: "assets/don2.png",
       portfolio: [
         {
-          title: "Dollar Shave Club - Our Blades Are F***ing Great",
-          category: "Launch Strategy",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Francis Alukkas - Haritha",
+          category: "Jewellery Ad",
+          videoUrl: "https://drive.google.com/file/d/1ciVE64oyjzzEut1R_bgKng_-aTwoiKBb/view?usp=drive_link"
         },
         {
-          title: "Coca-Cola - Share a Coke Campaign Case Study",
-          category: "Global Strategy",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Haritha x Mama Earth",
+          category: "Brand Collaboration",
+          videoUrl: "https://drive.google.com/file/d/1M9O4RsCXlQKtsBtgEATTinh2mjEC5e0R/view?usp=drive_link"
         },
         {
-          title: "Slack - Work Simplified Commercial",
-          category: "B2B Positioning",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Haritha - Tata",
+          category: "Commercial Video",
+          videoUrl: "https://drive.google.com/file/d/1z2AnAA4dAg5v8H5ROtIwBY2OZGoFMNJ2/view?usp=drive_link"
+        },
+        {
+          title: "Joy Alukkas",
+          category: "Jewellery Ad",
+          videoUrl: "https://drive.google.com/file/d/14CuD7lqCAyKQTQrfPqTewuG-hgUKhrZR/view?usp=drive_link"
+        },
+        {
+          title: "KLF Wrapped",
+          category: "Brand Film",
+          videoUrl: "https://drive.google.com/file/d/17BnwIJ8DOuCdjWlSgWC42xP4sJOGxrPd/view?usp=drive_link"
+        },
+        {
+          title: "Hilite",
+          category: "Promotional Video",
+          videoUrl: "https://drive.google.com/file/d/1eP7-OOJd0QItDLciisg2zvnN7KCi1tQS/view?usp=drive_link"
+        },
+        {
+          title: "Yaami Costume",
+          category: "Fashion Ad",
+          videoUrl: "https://drive.google.com/file/d/1lvTl6hoXq6Z-k2mHw6BhGbMIUVnzLjM3/view?usp=drive_link"
+        },
+        {
+          title: "Brahmins",
+          category: "Product Ad",
+          videoUrl: "https://drive.google.com/file/d/1GPiDSEA0zbUQfgf-jxqu4BSCCeLUxllC/view?usp=drive_link"
+        },
+        {
+          title: "Haritha x Forum",
+          category: "Brand Collaboration",
+          videoUrl: "https://drive.google.com/file/d/1m8kirfwIG8Px5km50BOBqm8S6lyjvgtJ/view?usp=drive_link"
+        },
+        {
+          title: "Haritha x Akantha",
+          category: "Brand Collaboration",
+          videoUrl: "https://drive.google.com/file/d/1rrwllpg47zXgW_Lr7iufYextBKKQDeWz/view?usp=drive_link"
+        },
+        {
+          title: "Sunny Leone DJ",
+          category: "Event Promo",
+          videoUrl: "https://drive.google.com/file/d/1sLdOX_aFcylxmd3dePLUuTkYqroJC0w7/view?usp=drive_link"
+        },
+        {
+          title: "Ihadone",
+          category: "Ad Film",
+          videoUrl: "https://drive.google.com/file/d/1_kv-sXC9h2_-rDwG8WRGA-4L-rCu8HWO/view?usp=drive_link"
         }
       ]
     },
