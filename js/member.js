@@ -137,6 +137,21 @@ document.addEventListener('DOMContentLoaded', () => {
           title: "Ihadone",
           category: "Ad Film",
           videoUrl: "https://drive.google.com/file/d/1_kv-sXC9h2_-rDwG8WRGA-4L-rCu8HWO/view?usp=drive_link"
+        },
+        {
+          title: "Yellow Wave Podcast Rewind",
+          category: "Podcast Video",
+          videoUrl: "https://drive.google.com/file/d/1kd9eQhkDyoxcPh7GROn2nHoHVL_Bxd2b/view?usp=drive_link"
+        },
+        {
+          title: "IM Vijayan Podcast Promo",
+          category: "Podcast Promo",
+          videoUrl: "https://drive.google.com/file/d/1zyT9_9GDkiTUGBNY5hyIOqTY6V8nLj6J/view?usp=drive_link"
+        },
+        {
+          title: "Podcast Shorts - Luna",
+          category: "Podcast Shorts",
+          videoUrl: "https://drive.google.com/file/d/1gIrTyAbh1dtcl0Ti5NJstLsMwLnsz9Ga/view?usp=drive_link"
         }
       ]
     },
