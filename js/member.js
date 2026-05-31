@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Data Store for Members (Using Google Drive Video URLs)
   const membersData = {
-    don1: {
+    jyothish: {
       name: "Jyothish Kumar",
       title: "Creative Director / Script Writer",
       bio: "Jyothish Kumar is the visionary creative director and script writer at DUONE. With a sharp eye for cinematic storytelling and years of experience crafting compelling narratives, he transforms bold ideas into powerful visual stories. His expertise in scriptwriting and creative direction ensures every project carries emotional depth, visual impact, and a lasting impression on audiences.",
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
-    don2: {
+    xavier: {
       name: "Don Xavier",
       title: "Video Editor",
       bio: "Don Xavier is the master video editor at DUONE, turning raw footage into polished, high-impact visual stories. With an exceptional eye for pacing, transitions, and color grading, he brings every project to life with cinematic precision. His editing expertise spans commercial ads, brand films, and promotional content, ensuring every frame delivers maximum impact.",
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
-    don3: {
+    midhun: {
       name: "Midhun Venu",
       title: "Video Editor",
       bio: "Midhun Venu is a highly skilled video editor at DUONE. Known for his creative cuts, rhythmic editing, and advanced post-production techniques, he specializes in delivering fast-paced and visually engaging content. From commercial campaigns to dynamic podcast visuals, his editing ensures that every project captures attention instantly and holds it until the very end.",
@@ -202,10 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return urlParams.get(param);
   };
 
-  // Get member ID or default to 'don1'
+  // Get member ID or default to 'jyothish'
   let memberId = getQueryParam('id');
   if (!memberId || !membersData[memberId]) {
-    memberId = 'don1';
+    memberId = 'jyothish';
   }
 
   const member = membersData[memberId];
