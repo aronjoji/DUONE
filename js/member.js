@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     jyothish: {
       name: "Jyothish Kumar",
       title: "Creative Director / Script Writer",
-      bio: "Jyothish Kumar is the visionary creative director and script writer at DUONE. With a sharp eye for cinematic storytelling and years of experience crafting compelling narratives, he transforms bold ideas into powerful visual stories. His expertise in scriptwriting and creative direction ensures every project carries emotional depth, visual impact, and a lasting impression on audiences.",
+      bio: "Jyothish Kumar is a visionary creative director and script writer. With a sharp eye for cinematic storytelling and years of experience crafting compelling narratives, he transforms bold ideas into powerful visual stories. His expertise in scriptwriting and creative direction ensures every project carries emotional depth, visual impact, and a lasting impression on audiences.",
       skills: ["Creative Direction", "Scriptwriting", "Storyboarding", "Screenwriting", "Art Direction", "Narrative Design"],
       image: "assets/don1.png",
       portfolio: [
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     xavier: {
       name: "Don Xavier",
       title: "Video Editor",
-      bio: "Don Xavier is the master video editor at DUONE, turning raw footage into polished, high-impact visual stories. With an exceptional eye for pacing, transitions, and color grading, he brings every project to life with cinematic precision. His editing expertise spans commercial ads, brand films, and promotional content, ensuring every frame delivers maximum impact.",
+      bio: "Don Xavier is a master video editor, turning raw footage into polished, high-impact visual stories. With an exceptional eye for pacing, transitions, and color grading, he brings every project to life with cinematic precision. His editing expertise spans commercial ads, brand films, and promotional content, ensuring every frame delivers maximum impact.",
       skills: ["Video Editing", "Color Grading", "Motion Graphics", "Sound Design", "Post-Production", "Visual Effects"],
       image: "assets/don2.png",
       portfolio: [
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     midhun: {
       name: "Midhun Venu",
       title: "Video Editor",
-      bio: "Midhun Venu is a highly skilled video editor at DUONE. Known for his creative cuts, rhythmic editing, and advanced post-production techniques, he specializes in delivering fast-paced and visually engaging content. From commercial campaigns to dynamic podcast visuals, his editing ensures that every project captures attention instantly and holds it until the very end.",
+      bio: "Midhun Venu is a highly skilled video editor. Known for his creative cuts, rhythmic editing, and advanced post-production techniques, he specializes in delivering fast-paced and visually engaging content. From commercial campaigns to dynamic podcast visuals, his editing ensures that every project captures attention instantly and holds it until the very end.",
       skills: ["Video Editing", "Creative Cuts", "Pacing & Rhythm", "Post-Production", "Color Correction", "Visual Storytelling"],
       image: "assets/don3.png",
       portfolio: [
