@@ -20,53 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
       image: "assets/don1.png",
       portfolio: [
         {
-          title: "Project Showcase 1",
-          category: "Creative Direction",
+          title: "Dhathri - TVC Shoot",
+          category: "Commercial Video",
           videoUrl: "https://drive.google.com/file/d/1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 2",
+          title: "Dhathri Theme Dec 20",
           category: "Brand Film",
           videoUrl: "https://drive.google.com/file/d/1DVolIdnU9Vj6dcKcuBSIx1ZLGfrZxql3/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 3",
-          category: "Commercial Video",
+          title: "Priya",
+          category: "Ad Film",
           videoUrl: "https://drive.google.com/file/d/13J1saGfkmjNKP6G8_Z8uPxkzHIjGvPAw/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 4",
+          title: "Logic Ad",
           category: "Script & Direction",
           videoUrl: "https://drive.google.com/file/d/1F7KNJBigG-ToHN9fC2l_zxdu87LNyx--/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 5",
-          category: "Visual Storytelling",
+          title: "Incredible Valentines Day",
+          category: "Creative Campaign",
           videoUrl: "https://drive.google.com/file/d/1AqswgjAypggTQLePtIz_yGp0n6T5TBB1/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 6",
-          category: "Creative Campaign",
+          title: "Koko Jun 27 Theme Video",
+          category: "Theme Video",
           videoUrl: "https://drive.google.com/file/d/12ndWLQT9ahByIcj_RQiQtu8v8s8wqsm_/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 7",
-          category: "Ad Film",
+          title: "Koko May 4 Content Reel",
+          category: "Content Reel",
           videoUrl: "https://drive.google.com/file/d/1jYFgE6wU6kWGpFoFzWRqzTAM4V3uIAxM/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 8",
-          category: "Short Film",
+          title: "Koko May 17 Promo Reel",
+          category: "Promo Reel",
           videoUrl: "https://drive.google.com/file/d/1beHeuY_Bpxdwg8ZkKt2O4_Sczpla-YWI/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 9",
-          category: "Brand Story",
+          title: "Dhathri Reel",
+          category: "Brand Reel",
           videoUrl: "https://drive.google.com/file/d/1BQ4G4bG8ddScsj31TioIN_VF6I-7-wqc/view?usp=drive_link"
         },
         {
-          title: "Project Showcase 10",
-          category: "Cinematic Reel",
+          title: "Dhathri Theme 1",
+          category: "Theme Video",
           videoUrl: "https://drive.google.com/file/d/1Pvd10g-2xFwsYnB7U67w6ShYI4r3vVPo/view?usp=drive_link"
         }
       ]
