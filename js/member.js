@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
       image: "assets/don1.png",
       portfolio: [
         {
+          title: "New Project",
+          category: "Creative Direction",
+          videoUrl: "https://drive.google.com/file/d/1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA/view?usp=sharing"
+        },
+        {
           title: "Dhathri - TVC Shoot",
           category: "Commercial Video",
           videoUrl: "https://drive.google.com/file/d/1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy/view?usp=drive_link"
