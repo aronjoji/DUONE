@@ -13,31 +13,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Data Store for Members (Using Google Drive Video URLs)
   const membersData = {
     don1: {
-      name: "Don1",
-      title: "Creative Director & Founder",
-      bio: "Don1 is the visionary founder and creative compass of DUONE. With over a decade of experience producing award-winning commercials and short films, he specializes in translating complex brand values into simple, emotionally resonant visual stories. He believes that a great ad is not just watched—it is felt. Don1 leads all creative production phases, ensuring the highest standards of cinematography and narrative integrity.",
-      skills: ["Creative Direction", "Cinematography", "Storyboarding", "Screenwriting", "Art Direction", "Executive Production"],
+      name: "Jyothish Kumar",
+      title: "Creative Director / Script Writer",
+      bio: "Jyothish Kumar is the visionary creative director and script writer at DUONE. With a sharp eye for cinematic storytelling and years of experience crafting compelling narratives, he transforms bold ideas into powerful visual stories. His expertise in scriptwriting and creative direction ensures every project carries emotional depth, visual impact, and a lasting impression on audiences.",
+      skills: ["Creative Direction", "Scriptwriting", "Storyboarding", "Screenwriting", "Art Direction", "Narrative Design"],
       image: "assets/don1.png",
       portfolio: [
         {
-          title: "Nike - Dream Crazy Commercial",
-          category: "Commercial Video",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Project Showcase 1",
+          category: "Creative Direction",
+          videoUrl: "https://drive.google.com/file/d/1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy/view?usp=drive_link"
         },
         {
-          title: "Apple - Underdogs Cinematic Campaign",
+          title: "Project Showcase 2",
           category: "Brand Film",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          videoUrl: "https://drive.google.com/file/d/1DVolIdnU9Vj6dcKcuBSIx1ZLGfrZxql3/view?usp=drive_link"
         },
         {
-          title: "Volvo - The Epic Split Ad",
-          category: "Visual Masterpiece",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Project Showcase 3",
+          category: "Commercial Video",
+          videoUrl: "https://drive.google.com/file/d/13J1saGfkmjNKP6G8_Z8uPxkzHIjGvPAw/view?usp=drive_link"
         },
         {
-          title: "GoPro - Fireman Saves Kitten",
-          category: "Viral Campaign",
-          videoUrl: "https://drive.google.com/file/d/17Vp5fKq-0dJ_ZaMEg04SW5l3I1S33Nlm/view?usp=drive_link"
+          title: "Project Showcase 4",
+          category: "Script & Direction",
+          videoUrl: "https://drive.google.com/file/d/1F7KNJBigG-ToHN9fC2l_zxdu87LNyx--/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 5",
+          category: "Visual Storytelling",
+          videoUrl: "https://drive.google.com/file/d/1AqswgjAypggTQLePtIz_yGp0n6T5TBB1/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 6",
+          category: "Creative Campaign",
+          videoUrl: "https://drive.google.com/file/d/12ndWLQT9ahByIcj_RQiQtu8v8s8wqsm_/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 7",
+          category: "Ad Film",
+          videoUrl: "https://drive.google.com/file/d/1jYFgE6wU6kWGpFoFzWRqzTAM4V3uIAxM/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 8",
+          category: "Short Film",
+          videoUrl: "https://drive.google.com/file/d/1beHeuY_Bpxdwg8ZkKt2O4_Sczpla-YWI/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 9",
+          category: "Brand Story",
+          videoUrl: "https://drive.google.com/file/d/1BQ4G4bG8ddScsj31TioIN_VF6I-7-wqc/view?usp=drive_link"
+        },
+        {
+          title: "Project Showcase 10",
+          category: "Cinematic Reel",
+          videoUrl: "https://drive.google.com/file/d/1Pvd10g-2xFwsYnB7U67w6ShYI4r3vVPo/view?usp=drive_link"
         }
       ]
     },
