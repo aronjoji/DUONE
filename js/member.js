@@ -193,9 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxContent = document.querySelector('.lightbox-content');
     
     if (lightbox && lightboxClose && lightboxContent) {
-      // Detect mobile viewport
-      const isMobile = () => window.innerWidth <= 768;
-      
       portfolioGrid.addEventListener('click', (e) => {
         const card = e.target.closest('.clickable-video-card');
         if (!card) return;
@@ -207,12 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDirectVideo = videoUrl.toLowerCase().endsWith('.mp4') || 
                               videoUrl.includes('raw.githubusercontent.com') || 
                               videoUrl.includes('/releases/download/');
-        
-        // On mobile + Google Drive: open directly in new tab for native player
-        if (isMobile() && !isDirectVideo) {
-          window.open(videoUrl, '_blank');
-          return;
-        }
         
         let playerHtml = '';
         if (isDirectVideo) {
