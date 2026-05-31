@@ -105,12 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const member = membersData[memberId];
 
-  // 3. Helper: Extract Google Drive File ID and return Direct Stream URL
-  function getGoogleDriveStreamUrl(url) {
+  // 3. Helper: Extract Google Drive File ID and return Embed/Preview URL
+  function getGoogleDriveEmbedUrl(url) {
     if (!url) return '';
     
-    // If it's already a stream URL, return it
-    if (url.includes('docs.google.com/uc?')) {
+    // If it's already a preview URL, return it
+    if (url.includes('/preview')) {
       return url;
     }
     
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const match = url.match(driveRegExp);
     
     if (match && match[1]) {
-      return `https://docs.google.com/uc?export=download&id=${match[1]}`;
+      return `https://drive.google.com/file/d/${match[1]}/preview`;
     }
     
     return url;
@@ -165,19 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioGrid.innerHTML = ''; // Clear loading
 
     member.portfolio.forEach(item => {
-      const streamUrl = getGoogleDriveStreamUrl(item.videoUrl);
+      const embedUrl = getGoogleDriveEmbedUrl(item.videoUrl);
       
       const cardHtml = `
         <div class="portfolio-card">
           <div class="video-player-container">
-            <video 
-              controls 
-              playsinline 
-              preload="metadata"
-              poster="${member.image}">
-              <source src="${streamUrl}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              src="${embedUrl}" 
+              title="${item.title}" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+            </iframe>
           </div>
           <div class="portfolio-card-info">
             <div class="portfolio-card-category">${item.category}</div>

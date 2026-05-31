@@ -1144,6 +1144,9 @@ footer {
     gap: 15px;
     text-align: center;
   }
+  .video-player-container {
+    padding-bottom: 70%; /* Taller on mobile to avoid Drive UI elements blocking controls */
+  }
 }
 
 @media (max-width: 576px) {
