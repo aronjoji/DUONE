@@ -102,4 +102,51 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 6. Our Work Lightbox
+  const wlModal = document.getElementById('work-lightbox');
+  const wlIframe = document.getElementById('wl-iframe');
+  const wlClose = document.getElementById('wl-close');
+  const wlBackdrop = document.getElementById('wl-backdrop');
+  const workCards = document.querySelectorAll('.work-card');
+
+  function openLightbox(videoSrc) {
+    if (wlModal && wlIframe) {
+      wlIframe.src = videoSrc + '?autoplay=1';
+      wlModal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+    }
+  }
+
+  function closeLightbox() {
+    if (wlModal && wlIframe) {
+      wlModal.classList.remove('active');
+      wlIframe.src = '';
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Setup click listeners for each card
+  workCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.getAttribute('data-src');
+      if (src) openLightbox(src);
+    });
+
+    // Keyboard support for accessibility
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const src = card.getAttribute('data-src');
+        if (src) openLightbox(src);
+      }
+    });
+  });
+
+  if (wlClose) wlClose.addEventListener('click', closeLightbox);
+  if (wlBackdrop) wlBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
 });

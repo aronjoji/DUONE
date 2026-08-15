@@ -23,6 +23,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#our-work">Our Work</a></li>
         <li><a href="#team">Our Team</a></li>
         <li><a href="#contact" class="cta-btn">Let's Talk</a></li>
       </ul>
@@ -160,6 +161,95 @@
     </div>
   </section>
 
+  <!-- Our Work Section -->
+  <section class="our-work" id="our-work">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" style="background:rgba(191,220,143,0.12);color:var(--accent-green);">OUR WORK</span>
+        <h2 style="color:var(--white);">Stories We've Crafted</h2>
+        <p style="color:rgba(247,245,233,0.6);">A glimpse into our finest productions — click any card to watch the full film.</p>
+      </div>
+
+      <div class="work-showcase">
+
+        <!-- Card 1 -->
+        <div class="work-card reveal"
+             data-src="https://drive.google.com/file/d/1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA/preview"
+             role="button" tabindex="0" aria-label="Play Cinematic Showcase Vol. 1">
+          <div class="work-card__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA&sz=w1280"
+                 alt="Cinematic Showcase Vol. 1" class="work-card__img" loading="lazy">
+            <div class="work-card__overlay">
+              <div class="work-card__play-ring"></div>
+              <div class="work-card__play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+            <span class="work-card__num">01</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__tag"><i class="fa-solid fa-film"></i> Featured Production</span>
+            <h3 class="work-card__title">Cinematic Showcase <em>Vol. 1</em></h3>
+            <span class="work-card__cta"><i class="fa-solid fa-play"></i> Watch Now</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="work-card reveal"
+             data-src="https://drive.google.com/file/d/1F7KNJBigG-ToHN9fC2l_zxdu87LNyx--/preview"
+             style="transition-delay:0.12s"
+             role="button" tabindex="0" aria-label="Play Cinematic Showcase Vol. 2">
+          <div class="work-card__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1F7KNJBigG-ToHN9fC2l_zxdu87LNyx--&sz=w1280"
+                 alt="Cinematic Showcase Vol. 2" class="work-card__img" loading="lazy">
+            <div class="work-card__overlay">
+              <div class="work-card__play-ring"></div>
+              <div class="work-card__play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+            <span class="work-card__num">02</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__tag"><i class="fa-solid fa-clapperboard"></i> Production</span>
+            <h3 class="work-card__title">Cinematic Showcase <em>Vol. 2</em></h3>
+            <span class="work-card__cta"><i class="fa-solid fa-play"></i> Watch Now</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="work-card reveal"
+             data-src="https://drive.google.com/file/d/1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy/preview"
+             style="transition-delay:0.24s"
+             role="button" tabindex="0" aria-label="Play Cinematic Showcase Vol. 3">
+          <div class="work-card__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy&sz=w1280"
+                 alt="Cinematic Showcase Vol. 3" class="work-card__img" loading="lazy">
+            <div class="work-card__overlay">
+              <div class="work-card__play-ring"></div>
+              <div class="work-card__play-btn"><i class="fa-solid fa-play"></i></div>
+            </div>
+            <span class="work-card__num">03</span>
+          </div>
+          <div class="work-card__body">
+            <span class="work-card__tag"><i class="fa-solid fa-star"></i> Spotlight</span>
+            <h3 class="work-card__title">Cinematic Showcase <em>Vol. 3</em></h3>
+            <span class="work-card__cta"><i class="fa-solid fa-play"></i> Watch Now</span>
+          </div>
+        </div>
+
+      </div><!-- /work-showcase -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="wl" id="work-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+      <div class="wl__backdrop" id="wl-backdrop"></div>
+      <div class="wl__box">
+        <button class="wl__close" id="wl-close" aria-label="Close video">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="wl__frame">
+          <iframe id="wl-iframe" src="" allow="autoplay; fullscreen" allowfullscreen title="Video"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Team Section -->
   <section class="team" id="team">
     <div class="container">
