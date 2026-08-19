@@ -113,6 +113,7 @@
         <!-- Card 1 -->
         <div class="work-card reveal"
              data-src="https://drive.google.com/file/d/1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA/preview"
+             data-title="Dhathri — Product Ad"
              role="button" tabindex="0" aria-label="Play Dhathri - product ad">
           <div class="work-card__thumb">
             <img src="https://drive.google.com/thumbnail?id=1bjCp3YRFFueSnJqKz-QO8-AC_BLxKyRA&sz=w1280"
@@ -133,6 +134,7 @@
         <!-- Card 2 -->
         <div class="work-card reveal"
              data-src="https://drive.google.com/file/d/1F7KNJBigG-ToHN9fC2l_zxdu87LNyx--/preview"
+             data-title="Logic Theme"
              style="transition-delay:0.12s"
              role="button" tabindex="0" aria-label="Play Logic theme">
           <div class="work-card__thumb">
@@ -154,6 +156,7 @@
         <!-- Card 3 -->
         <div class="work-card reveal"
              data-src="https://drive.google.com/file/d/1JcdqycmM4-pUrBTIGYiwgpglTwmLrRuy/preview"
+             data-title="Dhathri — TVC Shoot"
              style="transition-delay:0.24s"
              role="button" tabindex="0" aria-label="Play Dhathri - tvc shoot">
           <div class="work-card__thumb">
@@ -178,10 +181,13 @@
     <!-- Lightbox Modal -->
     <div class="wl" id="work-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
       <div class="wl__backdrop" id="wl-backdrop"></div>
-      <div class="wl__box">
+      <div class="wl__topbar">
+        <span class="wl__title" id="wl-title"></span>
         <button class="wl__close" id="wl-close" aria-label="Close video">
           <i class="fa-solid fa-xmark"></i>
         </button>
+      </div>
+      <div class="wl__box">
         <div class="wl__frame">
           <iframe id="wl-iframe" src="" allow="autoplay; fullscreen" allowfullscreen title="Video"></iframe>
         </div>

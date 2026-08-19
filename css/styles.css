@@ -1387,11 +1387,13 @@ footer {
   inset: 0;
   z-index: 2000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
+  padding: 20px;
 }
 
 .wl.active {
@@ -1405,6 +1407,53 @@ footer {
   background: rgba(4, 36, 17, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+}
+
+/* Top bar: close button + title — sits ABOVE the video */
+.wl__topbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1100px;
+  margin-bottom: 14px;
+}
+
+.wl__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(247, 245, 233, 0.75);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 60px);
+}
+
+.wl__close {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.wl__close:hover {
+  background: var(--primary-green);
+  color: var(--dark-green);
+  border-color: var(--primary-green);
 }
 
 .wl__box {
@@ -1424,31 +1473,6 @@ footer {
 
 .wl.active .wl__box {
   transform: scale(1);
-}
-
-.wl__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  color: var(--white);
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.wl__close:hover {
-  background: var(--primary-green);
-  color: var(--dark-green);
-  border-color: var(--primary-green);
 }
 
 .wl__frame {
@@ -1475,20 +1499,57 @@ footer {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .wl__box {
-    width: 95%;
-    border-radius: 12px;
+  /* Mobile: lightbox fills screen, video below a touch-friendly top bar */
+  .wl {
+    padding: 0;
+    justify-content: flex-start;
   }
-  
+
+  .wl__topbar {
+    width: 100%;
+    max-width: none;
+    padding: 14px 16px;
+    margin-bottom: 0;
+    background: rgba(4, 36, 17, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(133, 199, 125, 0.15);
+  }
+
+  .wl__title {
+    font-size: 13px;
+  }
+
   .wl__close {
-    top: 15px;
-    right: 15px;
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    /* Larger tap target */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .wl__box {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    aspect-ratio: 16 / 9;
+    /* On very tall phones, let the box grow to fill remaining height */
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Override aspect-ratio on very small heights (landscape phones) */
+  @media (max-height: 500px) {
+    .wl {
+      justify-content: flex-start;
+    }
+    .wl__box {
+      aspect-ratio: unset;
+      height: calc(100vh - 72px);
+    }
   }
 }
 

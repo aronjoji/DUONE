@@ -108,11 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const wlIframe = document.getElementById('wl-iframe');
   const wlClose = document.getElementById('wl-close');
   const wlBackdrop = document.getElementById('wl-backdrop');
+  const wlTitle = document.getElementById('wl-title');
   const workCards = document.querySelectorAll('.work-card');
 
-  function openLightbox(videoSrc) {
+  function openLightbox(videoSrc, title) {
     if (wlModal && wlIframe) {
       wlIframe.src = videoSrc + '?autoplay=1';
+      if (wlTitle) wlTitle.textContent = title || '';
       wlModal.classList.add('active');
       document.body.style.overflow = 'hidden'; // Stop background scrolling
     }
@@ -122,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wlModal && wlIframe) {
       wlModal.classList.remove('active');
       wlIframe.src = '';
+      if (wlTitle) wlTitle.textContent = '';
       document.body.style.overflow = '';
     }
   }
@@ -130,7 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
   workCards.forEach(card => {
     card.addEventListener('click', () => {
       const src = card.getAttribute('data-src');
-      if (src) openLightbox(src);
+      const title = card.getAttribute('data-title');
+      if (src) openLightbox(src, title);
     });
 
     // Keyboard support for accessibility
@@ -138,9 +142,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         const src = card.getAttribute('data-src');
-        if (src) openLightbox(src);
+        const title = card.getAttribute('data-title');
+        if (src) openLightbox(src, title);
       }
     });
+
+    // Touch feedback: scale down briefly on tap
+    card.addEventListener('touchstart', () => {
+      card.style.transform = 'scale(0.97)';
+    }, { passive: true });
+    card.addEventListener('touchend', () => {
+      card.style.transform = '';
+    }, { passive: true });
   });
 
   if (wlClose) wlClose.addEventListener('click', closeLightbox);
